@@ -1,0 +1,23 @@
+{
+  "name": "esiosoft_client_app",
+  "version": "1.0.0",
+  "description": "dairy management software",
+  "main": "index.js",
+  "scripts": {
+    "start":"electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gai-doodh-dairy/client-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gai-doodh-dairy/client-app/issues"
+  },
+  "homepage": "https://github.com/gai-doodh-dairy/client-app#readme",
+  "dependencies": {
+    "electron": "^4.1.1"
+  }
+}
