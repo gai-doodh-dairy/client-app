@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>ESIOSOFT</title>
-  </head>
-  <body>
-    electron
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/css/variables.css"> <!--colour change in navigation-->
+  <link rel="stylesheet" href="assets/css/nativize.css"> <!--font and home page design-->
+  <link rel="stylesheet" href="assets/css/global.css"> <!--fixing code block wise-->
+  <link rel="stylesheet" href="assets/css/about.css"> <!--code finishing-->
+  <link rel="stylesheet" href="assets/css/nav.css"> <!--navigation barq1..-->
+  <link rel="stylesheet" href="assets/css/section.css">
+  <link rel="stylesheet" href="assets/css/form.css">
+</head>
+<body>
+
+  <nav class="nav js-nav">
+    <header class="nav-header">
+      <h1 class="nav-title"><strong>ESIOSOFT</strong></h1>
+      <img src="assets/app-icon/icons.png" alt="icon" height="45" width="45">
+    </header>
+
+    <div class="nav-item u-category-windows">
+      <h5 class="nav-category">
+        Milk
+      </h5>
+      <button type="button" id="button-collection" data-section="collection"  class="nav-button"><em>Collection</em></button>
+      <button type="button" id="button-sale" data-section="sale" class="nav-button"><em>Sale</em></button>
+    </div>
+
+    <div class="nav-item u-category-menu">
+      <h5 class="nav-category">
+        Settings
+      </h5>
+      <button type="button" id="button-rate-charts" data-section="rate-charts" class="nav-button"><em>Rate Charts</em> </button>
+      <button type="button" id="button-member" data-section="member" class="nav-button"><em>Member</em></button>
+    </div>
+
+    <footer class="nav-footer">
+      <button type="button" id="button-about" data-modal="about" class="nav-footer-button">About</button>
+    </footer>
+  </nav>
+
+  <main class="content js-content"></main>
+
+  <script>
+    require('./assets/imports') //this is for open clicked items
+    require('./assets/nav') //navigation bar
+    require('./assets/demo-btns') //submenus option
+  </script>
+</body>
 </html>
