@@ -4,7 +4,7 @@ require('update-electron-app')({
 
 const path = require('path')
 const glob = require('glob')
-const {app, BrowserWindow} = require('electron')
+const {app, Menu, BrowserWindow} = require('electron')
 
 const debug = /--debug/.test(process.argv[2])
 
@@ -35,21 +35,35 @@ function initialize () {
     mainWindow = new BrowserWindow(windowOptions)
     mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
     mainWindow.maximize()
-
     // Launch fullscreen with DevTools open, usage: npm run debug
     if (debug) {
       mainWindow.webContents.openDevTools()
-      mainWindow.maximize()
+      mainWindow.maximize();
       require('devtron').install()
     }
-
     mainWindow.on('closed', () => {
       mainWindow = null
     })
   }
 
   app.on('ready', () => {
-    createWindow()
+    createWindow();
+    const mainMenuTemplate =  [
+    {
+      label: 'File',
+      submenu:[
+        {
+          label: 'Quit',
+          accelerator:process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
+          click(){
+            app.quit();
+          }
+        }
+      ]
+    }
+  ];
+    const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+    Menu.setApplicationMenu(mainMenu);
   })
 
   app.on('window-all-closed', () => {
