@@ -48,22 +48,6 @@ function initialize () {
 
   app.on('ready', () => {
     createWindow();
-    const mainMenuTemplate =  [
-    {
-      label: 'File',
-      submenu:[
-        {
-          label: 'Quit',
-          accelerator:process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
-          click(){
-            app.quit();
-          }
-        }
-      ]
-    }
-  ];
-    const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-    Menu.setApplicationMenu(mainMenu);
   })
 
   app.on('window-all-closed', () => {

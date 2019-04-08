@@ -19,7 +19,6 @@
         document.getElementById('datePicker').valueAsDate = todays_date;
         var hours = todays_date.getHours();
         var select = document.getElementById('shift');
-        console.log(select.options, hours);
         if (hours < 13) {
           select.options[0].selected = true;
           select.options[1].selected = false;
