@@ -13,9 +13,16 @@
 	    <input class="login__input" id="email" type="email" placeholder="youremail@gmail.com">
 	    <label class="login__label" for="password">Password:</label>
 	    <input class="login__input" id="password" type="password" placeholder="password">
-	    <button type="button" class="login__button ">Login</button>
+	    <button type="button" class="login__button " onclick="toindex()">Login</button>
 	  </div>
 	</section>
 	</form>
+	<a id="to-index" href="./index.html"></a>
+	<script>
+		function toindex(){
+			//check error
+			document.getElementById('to-index').click()
+		}
+	</script>
 </body>
 </html>
