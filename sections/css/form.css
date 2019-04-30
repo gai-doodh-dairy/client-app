@@ -28,7 +28,7 @@ span.milkspan {
 form.milkform {               /* xxxxxxxxxx*/
   padding: 0 35px;
 }
- input.milkinput[type="text"] {
+ button.milkinput[type="text"] {
 
   width: 100%;
   padding: 10px 0;
@@ -37,7 +37,7 @@ form.milkform {               /* xxxxxxxxxx*/
   font-size: 14px;
   border-bottom: 2px solid #9FB1BC;
 }
- input.milkinput[type="text"]:focus {
+ button.milkinput[type="text"]:focus {
   outline: none;
   border-color: #3D348B;
 }
@@ -75,7 +75,7 @@ form.milkform select.milkselect {
     cursor: pointer;
     transition: opacity .5s;}
 
-input.milkinput[type="button"] {
+button.milkinput[type="button"] {
   width: 100%;
 
   text-transform: uppercase;

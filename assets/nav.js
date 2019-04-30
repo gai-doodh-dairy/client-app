@@ -4,12 +4,23 @@ document.body.addEventListener('click', (event) => {
 
   if (event.target.dataset.section) {
     handleSectionTrigger(event)
+  } else if (event.target.dataset.subsection) {
+    handleSubSectionTrigger(event)
   } else if (event.target.dataset.modal) {
     handleModalTrigger(event)
   } else if (event.target.classList.contains('modal-hide')) {
     hideAllModals()
   }
 })
+
+function handleSubSectionTrigger(event){
+  const sections = document.querySelectorAll('.js-section.is-shown')
+  Array.prototype.forEach.call(sections, (section) => {
+    section.classList.remove('is-shown')
+  })
+  const sectionId = `${event.target.dataset.subsection}-subsection`
+  document.getElementById(sectionId).classList.add('is-shown')
+}
 
 function handleSectionTrigger (event) {
    hideAllSectionsAndDeselectButtons()
