@@ -5,24 +5,23 @@
 	<link rel = "stylesheet" type="text/css" href="./assets/css/login.css">
 </head>
 <body>
-	<form>
+	<form name="registration">
 		<section class="login__section">
 	  <div class="login__card">
 	  	<span class="login_span" >Login Form</span>
 	    <label class="login__label" for="email">E-mail:</label>
-	    <input class="login__input" id="email" type="email" placeholder="youremail@gmail.com">
+	    <input class="login__input" name="email" id="email" type="email" placeholder="youremail@gmail.com">
 	    <label class="login__label" for="password">Password:</label>
-	    <input class="login__input" id="password" type="password" placeholder="password">
+	    <input class="login__input" name="password" id="password" type="password" placeholder="password">
 	    <button type="button" class="login__button " onclick="toindex()">Login</button>
 	  </div>
 	</section>
 	</form>
 	<a id="to-index" href="./index.html"></a>
 	<script>
-		function toindex(){
-			//check error
-			document.getElementById('to-index').click()
-		}
+			function toindex(){
+				document.getElementById('to-index').click();
+			}
 	</script>
 </body>
 </html>
